@@ -1,6 +1,7 @@
 import sys
+import json
 from argparse import ArgumentParser
-
+from graphics import *
 
 def check_args(args):
     print("Input file: " + args.input_file)
@@ -26,7 +27,25 @@ def main():
         print("Error: " + str(e))
         exit(1)
 
+    with open(args.input_file, 'r') as f:
+        d = json.load(f)
+        print(d)
+        # print(d["Figures"])
+        for fig in d["Figures"]:
+            print(fig['type'])
+        print(d["Palette"])
 
+    win = GraphWin('JSON picture', 650, 400)
+    pt = Point(100, 50)
+    pt.draw(win)
+
+    win.postscript(file="image.eps", colormode='color')
+    from PIL import Image as NewImage
+    img = NewImage.open("image.eps")
+    img.save(args.output_file, "png")
+
+    win.getMouse()
+    win.close()
 
 if __name__ == "__main__":
     main()
