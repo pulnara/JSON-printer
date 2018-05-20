@@ -1,3 +1,5 @@
+### Zadanie 2
+
 Program, który odczytuje plik w formacie JSON z opisem grafiki, wyświetla tę grafikę na ekranie i zapisuje w pliku PNG.
 
 Plik może zawierać:
@@ -12,4 +14,4 @@ Każda figura może mieć określony kolor w postaci słownej (z zadanej palety,
 
 Przykładowy plik zawierający wszystkie dopuszczalne elementy: http://home.agh.edu.pl/~zkaleta/python/sample.json
 
-Program ma przyjmować nazwę pliku wejściowego z linii komend. JeĹźeli zostanie podana flaga -o (lub --output) to po niej ma być nazwa pliku, do którego grafikę należy zapisać. Jeśli flaga -o nie zostanie podana, to należy tylko wyświetlić na ekranie.
+Program ma przyjmować nazwę pliku wejściowego z linii komend. Jeżeli zostanie podana flaga -o (lub --output) to po niej ma być nazwa pliku, do którego grafikę należy zapisać. Jeśli flaga -o nie zostanie podana, to należy tylko wyświetlić na ekranie.
