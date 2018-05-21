@@ -11,6 +11,7 @@ class Screen:
 
 class Figure:
     def __init__(self, color):
+        self.artist = None
         self.color = color
 
     def get_artist(self):
