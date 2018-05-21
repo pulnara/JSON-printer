@@ -15,3 +15,10 @@ Każda figura może mieć określony kolor w postaci słownej (z zadanej palety,
 Przykładowy plik zawierający wszystkie dopuszczalne elementy: http://home.agh.edu.pl/~zkaleta/python/sample.json
 
 Program ma przyjmować nazwę pliku wejściowego z linii komend. Jeżeli zostanie podana flaga -o (lub --output) to po niej ma być nazwa pliku, do którego grafikę należy zapisać. Jeśli flaga -o nie zostanie podana, to należy tylko wyświetlić na ekranie.
+
+Running:
+
+`python3.5 json-printer.py input_file.json [-o output_file.png]`
+
+
+
