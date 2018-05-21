@@ -1,7 +1,5 @@
-import sys
 import json
 from argparse import ArgumentParser
-import matplotlib.pyplot as plt
 from os.path import exists
 from ast import literal_eval
 from figures import *
@@ -17,8 +15,10 @@ def check_args(args):
     if args.output_file:
         print('Output file: ' + args.output_file)
         output_file_splitted = args.output_file.split('.')
-        if len(output_file_splitted) != 1 and output_file_splitted[1] != 'png' or len(output_file_splitted) > 2:
+        if (len(output_file_splitted) != 1 and output_file_splitted[1] != 'png') or len(output_file_splitted) > 2:
             raise ValueError('Invalid output file name.')
+        elif len(output_file_splitted) == 1:
+            args.output_file += '.png'
 
 
 def rgb_to_html(rgb_tuple):
